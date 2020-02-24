@@ -1,0 +1,8 @@
+<launch>
+	<node pkg="clahe_ros" type="clahe_ros_node" name="clahe" output="screen">
+		<param name="clahe_clip_limit" value="4"/>
+		<param name="clahe_grid_size" value="8"/>
+		<remap from="/image" to="/blackfly_front/blackfly_front"/>
+		<remap from="/equalized_image" to="/blackfly_front/blackfly_front_equalized"/>
+	</node>
+</launch>
